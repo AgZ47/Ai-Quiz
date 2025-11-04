@@ -1,0 +1,155 @@
+/* Quiz.css */
+
+/* --- General Styles & Background --- */
+.screen {
+  /* Use a subtle, soft gradient or solid background */
+  background: #f0f4f8; /* Light gray-blue background */
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h1 {
+  color: #1a202c; /* Darker header color */
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* --- Container for Quiz Content --- */
+.quiz-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft, modern shadow */
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+}
+
+/* --- Input Fields --- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.quiinput {
+  width: 100%; /* Make inputs full width of their container */
+  font-size: 1rem;
+  border-radius: 8px;
+  line-height: 1.5;
+  padding: 12px 15px;
+  border: 1px solid #cbd5e0; /* Light border */
+  color: #4a5568;
+  background: #f7fafc; /* Very light background for input */
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.quiinput:hover {
+  border-color: #a0aec0;
+}
+
+.quiinput:focus {
+  border-color: #4299e1; /* Primary color focus */
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  outline: none;
+}
+
+/* --- Button Style --- */
+.button {
+  background-color: #4299e1; /* Primary blue */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+  margin-top: 10px;
+}
+
+.button:hover:not(:disabled) {
+  background-color: #3182ce; /* Slightly darker blue on hover */
+}
+
+.button:disabled {
+  background-color: #a0aec0; /* Grayed out when disabled */
+  cursor: not-allowed;
+}
+
+/* --- Quiz Questions Area --- */
+.qui {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.question-item {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f7f9fc;
+  border: 1px solid #edf2f7;
+}
+
+.question-item > p {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+/* --- Options (Radio Buttons) --- */
+.option-wrapper {
+  margin-bottom: 8px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: background-color 0.1s;
+  user-select: none;
+}
+
+label:hover {
+  background-color: #e2e8f0;
+}
+
+.radio-wrapper-15 {
+  /* Standard radio button styling */
+  margin-right: 10px;
+  transform: scale(1.1); /* Slightly larger */
+}
+
+/* --- Results Screen --- */
+.result-message {
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.result-message.correct {
+  background-color: #9ae6b4; /* Light green */
+  color: #276749; /* Dark green text */
+}
+
+.result-message.wrong {
+  background-color: #feb2b2; /* Light red */
+  color: #9b2c2c; /* Dark red text */
+}
